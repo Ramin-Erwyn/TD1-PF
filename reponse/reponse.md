@@ -36,6 +36,6 @@ m8: fonctionnelles si on ne modifie pas d
 
 m9: non fonctionnelles sinon on leve 0 on aura une erreur 
 
-m10:
+m10: non fonctionnelle renvoie NaN
 
-m11:
+m11: fonctionnelle car on ne pas modifier 
