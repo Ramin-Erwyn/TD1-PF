@@ -68,5 +68,12 @@ public class Noeud implements Arbre{
     }
 
     @Override
-    public boolean estTrie() {}
+    public boolean estTrie() {
+        for (final Arbre a : fils) {
+            if (a.estTrie() == false) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
