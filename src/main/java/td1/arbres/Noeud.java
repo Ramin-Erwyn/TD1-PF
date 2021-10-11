@@ -23,10 +23,11 @@ public class Noeud implements Arbre{
 
     @Override
     public boolean contient(Integer val) {
-        boolean rtr =false;
+        boolean rtr = false;
         for (final Arbre a : fils) {
-            if(a.contient(val)) return true;
+            if (a.contient(val)) return true;
         }
+        return rtr;
     }
 
     @Override
@@ -49,12 +50,21 @@ public class Noeud implements Arbre{
 
     @Override
     public Integer min() {
-        return null;
+        TreeSet<Integer> val = new TreeSet<>();
+        for (final Arbre a : fils) {
+            val.add(a.min());
+        }
+        return val.first();
     }
+
 
     @Override
     public Integer max() {
-        return null;
+        TreeSet<Integer> val = new TreeSet<>();
+        for (final Arbre a : fils) {
+            val.add(a.max());
+        }
+        return val.last();
     }
 
     @Override
