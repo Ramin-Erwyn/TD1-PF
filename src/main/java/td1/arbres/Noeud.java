@@ -68,7 +68,5 @@ public class Noeud implements Arbre{
     }
 
     @Override
-    public boolean estTrie() {
-        return false;
-    }
+    public boolean estTrie() {}
 }
