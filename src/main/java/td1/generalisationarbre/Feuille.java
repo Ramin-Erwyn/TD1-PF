@@ -2,7 +2,7 @@ package td1.generalisationarbre;
 
 import java.util.Set;
 
-public class Feuille <T> implements Arbre{
+public class Feuille <T> implements Arbre<T>{
     private final T valeur;
 
     public Feuille(final T valeur) {
@@ -15,7 +15,7 @@ public class Feuille <T> implements Arbre{
     }
 
     @Override
-    public boolean contient(final Object val) {
+    public boolean contient(final T val) {
         return val.equals(valeur);
     }
 
