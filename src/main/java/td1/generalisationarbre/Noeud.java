@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Noeud<T> implements Arbre<T>, Sommable<T>{
+public class Noeud<T extends Sommable<T>> implements Arbre<T>{
     private final List<Arbre<T>> fils;
 
     public Noeud(final List<Arbre<T>> fils) {
@@ -41,7 +41,13 @@ public class Noeud<T> implements Arbre<T>, Sommable<T>{
 
     @Override
     public T somme() {
-        return null;
+        if (fils == null || fils.size() == 0)
+            return null;
+        T val = fils.get(0).somme();
+        for (int i = 1; i<fils.size(); i++) {
+            val = val.sommer(fils.get(i).somme());
+        }
+        return val;
     }
 
     @Override
@@ -57,10 +63,5 @@ public class Noeud<T> implements Arbre<T>, Sommable<T>{
     @Override
     public boolean estTrie() {
         return false;
-    }
-
-    @Override
-    public T sommer(T autre) {
-        return null;
     }
 }

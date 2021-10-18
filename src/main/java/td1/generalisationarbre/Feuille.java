@@ -2,7 +2,7 @@ package td1.generalisationarbre;
 
 import java.util.Set;
 
-public class Feuille <T> implements Arbre<T>,Sommable<T>{
+public class Feuille <T extends Sommable<T>> implements Arbre<T>{
     private final T valeur;
 
     public Feuille(final T valeur) {
@@ -42,10 +42,5 @@ public class Feuille <T> implements Arbre<T>,Sommable<T>{
     @Override
     public boolean estTrie() {
         return false;
-    }
-
-    @Override
-    public T sommer(T autre) {
-        return null;
     }
 }

@@ -2,7 +2,7 @@ package td1.generalisationarbre;
 
 import java.util.Set;
 
-public interface Arbre<T>{
+public interface Arbre<T extends Sommable<T>>{
     int taille();
     boolean contient( final T val);
     Set<T> valeurs();
