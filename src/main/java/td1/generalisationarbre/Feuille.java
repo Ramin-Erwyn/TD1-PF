@@ -26,7 +26,22 @@ public class Feuille <T> implements Arbre<T>,Sommable<T>{
 
     @Override
     public T somme() {
-        return null;
+        return valeur;
+    }
+
+    @Override
+    public T min() {
+        return valeur;
+    }
+
+    @Override
+    public T max() {
+        return valeur;
+    }
+
+    @Override
+    public boolean estTrie() {
+        return false;
     }
 
     @Override

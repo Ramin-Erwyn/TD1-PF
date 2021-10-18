@@ -45,6 +45,21 @@ public class Noeud<T> implements Arbre<T>, Sommable<T>{
     }
 
     @Override
+    public T min() {
+        return null;
+    }
+
+    @Override
+    public T max() {
+        return null;
+    }
+
+    @Override
+    public boolean estTrie() {
+        return false;
+    }
+
+    @Override
     public T sommer(T autre) {
         return null;
     }
