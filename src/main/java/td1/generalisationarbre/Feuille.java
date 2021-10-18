@@ -2,7 +2,7 @@ package td1.generalisationarbre;
 
 import java.util.Set;
 
-public class Feuille <T> implements Arbre<T>{
+public class Feuille <T> implements Arbre<T>,Sommable<T>{
     private final T valeur;
 
     public Feuille(final T valeur) {
@@ -24,4 +24,13 @@ public class Feuille <T> implements Arbre<T>{
         return Set.of(valeur);
     }
 
+    @Override
+    public T somme() {
+        return null;
+    }
+
+    @Override
+    public T sommer(T autre) {
+        return null;
+    }
 }
