@@ -15,5 +15,16 @@ public class Entier implements Sommable<Entier>{
     public Entier sommer(Entier autre) {
         return new Entier(this.valeur() + autre.valeur());
     }
+    @Override
+    public boolean equals(Object o) { //generer
+        if (o == null) return false;
+        if (!(o instanceof Entier)) return false;
+        return this.valeur == ((Entier)o).valeur;
+    }
+
+    @Override
+    public int hashCode() { //generer
+        return valeur.hashCode();
+    }
 
 }
